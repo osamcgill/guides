@@ -15,6 +15,9 @@ a.btn.o{background:transparent;border:1.5px solid var(--gold);color:var(--navy)}
 .new{display:inline-block;background:#007e3c;color:#fff;font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px;margin-inline-start:6px;vertical-align:middle}
 .vid{margin-top:14px;border-radius:12px;overflow:hidden;background:#000;border:1px solid #DCE1E8}
 .vid video{display:block;width:100%;height:auto}
+.vtab{display:flex;gap:8px;margin-top:12px}
+.vtab button{font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--gold);background:transparent;color:var(--navy);border-radius:20px;padding:5px 16px;cursor:pointer}
+.vtab button.on{background:var(--gold)}
 .vcap{font-size:13px;color:#5B6270;margin:8px 0 0}
 footer{text-align:center;color:#5B6270;font-size:13px;padding:0 16px 30px}
 </style></head><body>
@@ -25,9 +28,13 @@ footer{text-align:center;color:#5B6270;font-size:13px;padding:0 16px 30px}
 <div class="vid"><video controls playsinline preload="metadata" poster="fellowship-video-poster.jpg" src="OSAM-Fellowship-Guide-Detailed-EN-ARsubs.mp4"></video></div>
 <p class="vcap">🎬 الشرح المفصّل للدليل (١٠ دقائق) · بالإنجليزية مع ترجمة عربية · Detailed walkthrough in English with Arabic subtitles</p></div>
 <div class="card"><h2>دليل الشتاء في مونتريال</h2><p class="en">Winter in Montreal · a guide for Omani scholars and families</p>
-<div class="btns"><a class="btn" href="OSAM-Winter-Guide-Montreal-AR.pdf">العربية</a><a class="btn o" href="OSAM-Winter-Guide-Montreal-EN.pdf">English</a></div></div>
+<div class="btns"><a class="btn" href="OSAM-Winter-Guide-Montreal-AR.pdf">العربية</a><a class="btn o" href="OSAM-Winter-Guide-Montreal-EN.pdf">English</a></div>
+<div class="vtab" id="wtab"><button type="button" class="on" data-src="OSAM-Winter-Video-AR.mp4">فيديو بالعربية</button><button type="button" data-src="OSAM-Winter-Video-EN.mp4">Video in English</button></div>
+<div class="vid"><video id="wvid" controls playsinline preload="metadata" poster="winter-video-poster.jpg" src="OSAM-Winter-Video-AR.mp4"></video></div>
+<p class="vcap">❄️ فيديو دليل الشتاء في مونتريال (٤ دقائق) · Winter in Montreal video</p></div>
 <div class="card"><h2>دليل المكتبات وأماكن الدراسة في مونتريال<span class="new">جديد · New</span></h2><p class="en">Libraries &amp; Study Spaces in Montreal · McGill, hospitals, public libraries, cafés</p>
 <div class="btns"><a class="btn" href="OSAM-Libraries-Study-Guide-Montreal-AR.pdf">العربية</a><a class="btn o" href="OSAM-Libraries-Study-Guide-Montreal-EN.pdf">English</a></div></div>
 </main>
 <footer>Instagram: @osamcgill · osamcgill@gmail.com<br>المعلومات قابلة للتغيير؛ تحقّق دائماً من المصادر الرسمية · Always confirm with official sources.</footer>
+<script>document.querySelectorAll('#wtab button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#wtab button').forEach(x=>x.classList.toggle('on',x===b));const v=document.getElementById('wvid');v.src=b.dataset.src;v.play().catch(()=>{});});</script>
 </body></html>
