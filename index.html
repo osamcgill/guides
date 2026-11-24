@@ -33,11 +33,13 @@ footer{text-align:center;color:#5B6270;font-size:13px;padding:0 16px 30px}
 <div class="vtab" data-for="wvid"><button type="button" class="on" data-src="OSAM-Winter-Video-AR.mp4">فيديو بالعربية</button><button type="button" data-src="OSAM-Winter-Video-EN.mp4">Video in English</button></div>
 <div class="vid"><video id="wvid" controls playsinline preload="metadata" poster="winter-video-poster.jpg" src="OSAM-Winter-Video-AR.mp4"></video></div>
 <p class="vcap">❄️ فيديو دليل الشتاء في مونتريال (٤ دقائق) · Winter in Montreal video</p></div>
-<div class="card"><h2>دليل المكتبات وأماكن الدراسة في مونتريال<span class="new">جديد · New</span></h2><p class="en">Libraries &amp; Study Spaces in Montreal · McGill, hospitals, public libraries, cafés</p>
+<div class="card"><h2>دليل المكتبات وأماكن الدراسة في مونتريال</h2><p class="en">Libraries &amp; Study Spaces in Montreal · McGill, hospitals, public libraries, cafés</p>
 <div class="btns"><a class="btn" href="OSAM-Libraries-Study-Guide-Montreal-AR.pdf">العربية</a><a class="btn o" href="OSAM-Libraries-Study-Guide-Montreal-EN.pdf">English</a></div>
 <div class="vtab" data-for="lvid"><button type="button" class="on" data-src="OSAM-Libraries-Guide-Video-AR.mp4">فيديو بالعربية</button><button type="button" data-src="OSAM-Libraries-Guide-Video-EN-ARsubs.mp4">English · ترجمة عربية</button></div>
 <div class="vid"><video id="lvid" controls playsinline preload="metadata" poster="libraries-video-poster.jpg" src="OSAM-Libraries-Guide-Video-AR.mp4"></video></div>
 <p class="vcap">📚 فيديو دليل المكتبات وأماكن الدراسة · Libraries &amp; Study Spaces video</p></div>
+<div class="card"><h2>دليل المواصلات العامة في مونتريال وكندا<span class="new">جديد · New</span></h2><p class="en">Public Transit in Montreal &amp; Canada · OPUS card, fares, McGill student discount, métro map</p>
+<div class="btns"><a class="btn" href="OSAM-Public-Transit-Guide-Montreal-AR.pdf">العربية</a><a class="btn o" href="OSAM-Public-Transit-Guide-Montreal-EN.pdf">English</a></div></div>
 </main>
 <footer>Instagram: @osamcgill · osamcgill@gmail.com<br>المعلومات قابلة للتغيير؛ تحقّق دائماً من المصادر الرسمية · Always confirm with official sources.</footer>
 <script>document.querySelectorAll('.vtab').forEach(t=>t.querySelectorAll('button').forEach(b=>b.onclick=()=>{t.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const v=document.getElementById(t.dataset.for);v.src=b.dataset.src;v.play().catch(()=>{});}));</script>
